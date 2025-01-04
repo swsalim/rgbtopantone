@@ -87,21 +87,18 @@ export default function RootLayout({
         <script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="+mdYbdTzJP3E6remwxTQLg"
-          defer
-        ></script>
+          defer></script>
         <script
           src="https://beamanalytics.b-cdn.net/beam.min.js"
           data-token="c2fbac7b-0b09-48f0-b925-7a5a61de2a3b"
-          async
-        ></script>
+          async></script>
       </head>
       <body
         className={cn(
           'flex min-h-screen flex-col font-sans antialiased dark:bg-gray-900 dark:text-gray-100',
-          plusJakartaSans.variable
+          plusJakartaSans.variable,
         )}
-        suppressHydrationWarning
-      >
+        suppressHydrationWarning>
         <StickyAds
           image="codefast.png"
           url="https://codefa.st/?via=rgbtopantone"
@@ -113,11 +110,7 @@ export default function RootLayout({
         <main className="flex grow flex-col justify-center">{children}</main>
         <Footer />
         <Toaster />
-        <script
-          async
-          defer
-          src="https://scripts.simpleanalyticscdn.com/latest.js"
-        ></script>
+        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         {/* <script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script> */}
         <noscript>
           <Image

@@ -11,8 +11,8 @@ type Tool = {
 };
 const tools: Tool[] = [
   {
-    url: 'https://www.cymktopantone.com/',
-    name: 'Convert CYMK to Pantone',
+    url: 'https://www.cmyktopantone.com/',
+    name: 'Convert CMYK to Pantone',
     target: '_blank',
     isExternal: true,
   },
@@ -22,19 +22,19 @@ const tools: Tool[] = [
     target: '_blank',
   },
   {
-    url: 'https://www.cymktopantone.com/convert-hex-to-pantone-pms',
+    url: 'https://www.cmyktopantone.com/convert-hex-to-pantone-pms',
     name: 'Convert HEX to Pantone',
     target: '_blank',
     isExternal: true,
   },
   {
-    url: 'https://www.cymktopantone.com/convert-hsv-to-pantone-pms',
+    url: 'https://www.cmyktopantone.com/convert-hsv-to-pantone-pms',
     name: 'Convert HSV to Pantone',
     target: '_blank',
     isExternal: true,
   },
   {
-    url: 'https://www.cymktopantone.com/convert-hex-to-rgb',
+    url: 'https://www.cmyktopantone.com/convert-hex-to-rgb',
     name: 'Convert HEX to RGB',
     target: '_blank',
     isExternal: true,
