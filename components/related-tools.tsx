@@ -39,6 +39,11 @@ const tools: Tool[] = [
     target: '_blank',
     isExternal: true,
   },
+  {
+    url: '/convert-pantone-to-rgb',
+    name: 'Convert Pantone to RGB',
+    target: '_blank',
+  },
 ];
 
 export default function RelatedTools() {
