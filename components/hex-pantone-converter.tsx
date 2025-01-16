@@ -4,13 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { CopyIcon } from 'lucide-react';
 
-import {
-  findMatchingPMSColors,
-  formatRgbString,
-  getTextColor,
-  hexToRgb,
-  rgbToHex,
-} from '@/lib/colors';
+import { findMatchingPMSColors, formatRgbString, getTextColor, hexToRgb } from '@/lib/colors';
 import { useToast } from '@/lib/hooks/use-toast';
 
 import { Container } from '@/components/container';
@@ -27,23 +21,21 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Slider } from '@/components/ui/slider';
 import { Wrapper } from '@/components/wrapper';
 
 const distances = ['16', '32', '48', '64', '80', '96'];
 
-export default function RgbPantoneConverter() {
+export default function HexPantoneConverter() {
   const { toast } = useToast();
 
-  const [rgb, setRgb] = useState({ r: 199, g: 63, b: 103 });
+  const [hex, setHex] = useState('#6D39AC');
   const [matchingColors, setMatchingColors] = useState<{ pantone: string; hex: string }[]>([]);
   const [distance, setDistance] = useState('32');
 
-  const hex = rgbToHex(rgb);
+  const rgb = hexToRgb(hex);
 
-  const handleInputChange = (key: keyof typeof rgb, value: string) => {
-    const numValue = Math.min(100, Math.max(0, Number(value) || 0));
-    setRgb((prev) => ({ ...prev, [key]: numValue }));
+  const handleInputChange = (value: string) => {
+    setHex(value);
   };
 
   const copyToClipboard = (text: string, label: string) => {
@@ -58,50 +50,36 @@ export default function RgbPantoneConverter() {
   useEffect(() => {
     const tempMatchingColors = findMatchingPMSColors(hex.substring(1), Number(distance));
     setMatchingColors(tempMatchingColors);
-  }, [rgb, distance, hex]);
+  }, [hex, distance]);
 
   return (
     <Wrapper size="lg">
       <Container>
         <p>
-          Easily transform your RGB values into Pantone perfection! Enter your RGB values below and
+          Easily transform your HEX values into Pantone perfection! Enter your HEX values below and
           get instant, accurate results.
         </p>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <Card>
             <CardContent>
               <div className="flex flex-col gap-y-6">
-                {Object.entries({
-                  Red: 'r',
-                  Green: 'g',
-                  Blue: 'b',
-                }).map(([label, key]) => (
-                  <div key={key}>
-                    <div className="mb-2 flex items-center justify-between">
-                      <Label>{label}</Label>
-                      <div className="flex items-center gap-2">
-                        <Input
-                          type="number"
-                          value={rgb[key as keyof typeof rgb]}
-                          onChange={(e) =>
-                            handleInputChange(key as keyof typeof rgb, e.target.value)
-                          }
-                          className="w-20"
-                          min={0}
-                          max={100}
-                        />
-                      </div>
-                    </div>
-                    <Slider
-                      value={[rgb[key as keyof typeof rgb]]}
-                      onValueChange={([value]) => setRgb((prev) => ({ ...prev, [key]: value }))}
-                      max={255}
-                      step={1}
-                      className="mt-2"
-                      color={label.toLowerCase()}
+                <div>
+                  <Label>HEX</Label>
+                  <div className="mb-2 flex items-center justify-between">
+                    <Input
+                      type="color"
+                      id="colorPicker"
+                      value={hex}
+                      onChange={(e) => handleInputChange(e.target.value)}
+                      className="h-20 w-full cursor-pointer"
                     />
                   </div>
-                ))}
+                  <Input
+                    type="text"
+                    value={hex.toUpperCase()}
+                    onChange={(e) => handleInputChange(e.target.value)}
+                  />
+                </div>
                 <div>
                   <div className="mb-2">
                     <Label>Distance</Label>
@@ -149,17 +127,6 @@ export default function RgbPantoneConverter() {
                     onClick={() =>
                       copyToClipboard(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`, 'RGB value')
                     }>
-                    <CopyIcon className="h-4 w-4" />
-                  </Button>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p>
-                    <span className="font-medium">HEX:</span> <b>{hex}</b>
-                  </p>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => copyToClipboard(hex, 'HEX value')}>
                     <CopyIcon className="h-4 w-4" />
                   </Button>
                 </div>

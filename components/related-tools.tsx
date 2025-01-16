@@ -22,27 +22,56 @@ const tools: Tool[] = [
     target: '_blank',
   },
   {
-    url: 'https://www.cmyktopantone.com/convert-hex-to-pantone-pms',
+    url: '/convert-hex-to-pantone-pms',
     name: 'Convert HEX to Pantone',
     target: '_blank',
-    isExternal: true,
   },
   {
-    url: 'https://www.cmyktopantone.com/convert-hsv-to-pantone-pms',
+    url: '/convert-hsv-to-pantone-pms',
     name: 'Convert HSV to Pantone',
     target: '_blank',
+  },
+  {
+    url: '/convert-hex-to-rgb',
+    name: 'Convert HEX to RGB',
+    target: '_blank',
+  },
+  {
+    url: '/convert-hsv-to-rgb',
+    name: 'Convert HSV to RGB',
+    target: '_blank',
+  },
+  {
+    url: '/convert-hsv-to-hex',
+    name: 'Convert HSV to HEX',
+    target: '_blank',
+  },
+  {
+    url: 'https://www.cmyktopantone.com/convert-hex-to-cmyk',
+    name: 'Convert HEX to CMYK',
+    target: '_blank',
     isExternal: true,
   },
   {
-    url: 'https://www.cmyktopantone.com/convert-hex-to-rgb',
-    name: 'Convert HEX to RGB',
+    url: '/convert-hex-to-hsv',
+    name: 'Convert HEX to HSV',
     target: '_blank',
-    isExternal: true,
   },
   {
     url: '/convert-pantone-to-rgb',
     name: 'Convert Pantone to RGB',
     target: '_blank',
+  },
+  {
+    url: '/convert-pantone-to-hex',
+    name: 'Convert Pantone to HEX',
+    target: '_blank',
+  },
+  {
+    url: 'https://www.cmyktopantone.com/convert-pantone-to-cmyk',
+    name: 'Convert Pantone to CMYK',
+    target: '_blank',
+    isExternal: true,
   },
 ];
 
@@ -51,24 +80,22 @@ export default function RelatedTools() {
 
   return (
     <>
-      <div>
+      <div className="flex-shrink-0">
         <span className="text-sm font-medium uppercase text-gray-500 dark:text-gray-100">
           Related tools:
         </span>
       </div>
-      <div className="flex flex-col gap-x-4 gap-y-5 md:flex-row">
-        {tools.map((tool) => {
+      <div className="grid w-full flex-grow grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
+        {tools.map((tool, index) => {
           const Comp = tool.isExternal ? 'a' : Link;
           return tool.url !== pathname ? (
-            <>
-              <Comp
-                key={tool.url}
-                href={tool.url}
-                target={tool.target}
-                className="font-medium text-gray-700 transition hover:text-violet-600 dark:text-gray-300 dark:hover:text-violet-400">
-                {tool.name}
-              </Comp>
-            </>
+            <Comp
+              key={index}
+              href={tool.url}
+              target={tool.target}
+              className="font-medium text-gray-700 transition hover:text-violet-600 dark:text-gray-300 dark:hover:text-violet-400">
+              {tool.name}
+            </Comp>
           ) : null;
         })}
       </div>

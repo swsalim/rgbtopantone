@@ -9,6 +9,7 @@ import {
   formatRgbString,
   getTextColor,
   hexToRgb,
+  hsvToRgb,
   rgbToHex,
 } from '@/lib/colors';
 import { useToast } from '@/lib/hooks/use-toast';
@@ -32,18 +33,19 @@ import { Wrapper } from '@/components/wrapper';
 
 const distances = ['16', '32', '48', '64', '80', '96'];
 
-export default function RgbPantoneConverter() {
+export default function HsvPantoneConverter() {
   const { toast } = useToast();
 
-  const [rgb, setRgb] = useState({ r: 199, g: 63, b: 103 });
+  const [hsv, setHsv] = useState({ h: 199, s: 68, v: 38 });
   const [matchingColors, setMatchingColors] = useState<{ pantone: string; hex: string }[]>([]);
   const [distance, setDistance] = useState('32');
 
+  const rgb = hsvToRgb(hsv);
   const hex = rgbToHex(rgb);
 
-  const handleInputChange = (key: keyof typeof rgb, value: string) => {
-    const numValue = Math.min(100, Math.max(0, Number(value) || 0));
-    setRgb((prev) => ({ ...prev, [key]: numValue }));
+  const handleInputChange = (key: keyof typeof hsv, value: string) => {
+    const numValue = Math.min(key === 'h' ? 360 : 100, Math.max(0, Number(value) || 0));
+    setHsv((prev) => ({ ...prev, [key]: numValue }));
   };
 
   const copyToClipboard = (text: string, label: string) => {
@@ -58,13 +60,13 @@ export default function RgbPantoneConverter() {
   useEffect(() => {
     const tempMatchingColors = findMatchingPMSColors(hex.substring(1), Number(distance));
     setMatchingColors(tempMatchingColors);
-  }, [rgb, distance, hex]);
+  }, [hsv, distance, hex]);
 
   return (
     <Wrapper size="lg">
       <Container>
         <p>
-          Easily transform your RGB values into Pantone perfection! Enter your RGB values below and
+          Easily transform your HSV values into Pantone perfection! Enter your HSV values below and
           get instant, accurate results.
         </p>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
@@ -72,9 +74,9 @@ export default function RgbPantoneConverter() {
             <CardContent>
               <div className="flex flex-col gap-y-6">
                 {Object.entries({
-                  Red: 'r',
-                  Green: 'g',
-                  Blue: 'b',
+                  Hue: 'h',
+                  Saturation: 's',
+                  Brightness: 'v',
                 }).map(([label, key]) => (
                   <div key={key}>
                     <div className="mb-2 flex items-center justify-between">
@@ -82,20 +84,20 @@ export default function RgbPantoneConverter() {
                       <div className="flex items-center gap-2">
                         <Input
                           type="number"
-                          value={rgb[key as keyof typeof rgb]}
+                          value={hsv[key as keyof typeof hsv]}
                           onChange={(e) =>
-                            handleInputChange(key as keyof typeof rgb, e.target.value)
+                            handleInputChange(key as keyof typeof hsv, e.target.value)
                           }
                           className="w-20"
                           min={0}
-                          max={100}
+                          max={key === 'h' ? 360 : 100}
                         />
                       </div>
                     </div>
                     <Slider
-                      value={[rgb[key as keyof typeof rgb]]}
-                      onValueChange={([value]) => setRgb((prev) => ({ ...prev, [key]: value }))}
-                      max={255}
+                      value={[hsv[key as keyof typeof hsv]]}
+                      onValueChange={([value]) => setHsv((prev) => ({ ...prev, [key]: value }))}
+                      max={key === 'h' ? 360 : 100}
                       step={1}
                       className="mt-2"
                       color={label.toLowerCase()}
