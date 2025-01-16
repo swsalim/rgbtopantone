@@ -32,6 +32,11 @@ const tools: Tool[] = [
     target: '_blank',
   },
   {
+    url: '/convert-cmyk-to-rgb',
+    name: 'Convert CMYK to RGB',
+    target: '_blank',
+  },
+  {
     url: '/convert-hex-to-rgb',
     name: 'Convert HEX to RGB',
     target: '_blank',
