@@ -86,7 +86,7 @@ export default function RootLayout({
         <LogoJsonLd logo={absoluteUrl('/icons/logo.png')} url={absoluteUrl()} />
         <script
           src="https://analytics.ahrefs.com/analytics.js"
-          data-key="+mdYbdTzJP3E6remwxTQLg"
+          data-key="fGY2dRKQ8l5IERBWSt1NYQ"
           defer></script>
         <script
           src="https://beamanalytics.b-cdn.net/beam.min.js"
