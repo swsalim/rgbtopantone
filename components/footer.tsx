@@ -79,7 +79,7 @@ export default function Footer({ className, ...props }: FooterProps) {
                 {navigation.projects.map((item) => (
                   <li key={item.name}>
                     <a
-                      href={`${item.href}?ref=cmyktopantone`}
+                      href={`${item.href}?ref=rgbtopantone`}
                       className="text-base/6 text-gray-300 transition hover:text-violet-400"
                       target="_blank">
                       {item.name}
