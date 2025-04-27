@@ -112,6 +112,10 @@ export default function RootLayout({
         <AnalyticsWrapper />
         <Footer />
         <Toaster />
+        <script
+          src="https://app.tinyadz.com/scripts/ads.js?siteId=680e5f4f03dfc972f26ed8e0"
+          type="module"
+          async></script>
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         {/* <script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script> */}
         <noscript>
