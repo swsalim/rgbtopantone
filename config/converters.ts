@@ -24,7 +24,7 @@ export const converters: ConverterConfig[] = [
     title: 'CMYK to HEX Color Converter',
     description:
       'Easily convert CMYK to HEX colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-cmyk-to-hex',
+    url: 'https://www.cmyktopantone.com/convert-cmyk-to-hex?ref=rgbtopantone.com',
     component: 'cmyk/to-hex',
     content: 'cmyk/to-hex-content',
   },
@@ -35,7 +35,7 @@ export const converters: ConverterConfig[] = [
     title: 'CMYK to HSL Color Converter',
     description:
       'Easily convert CMYK to HSL colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-cmyk-to-hsl',
+    url: 'https://www.cmyktopantone.com/convert-cmyk-to-hsl?ref=rgbtopantone.com',
     component: 'cmyk/to-hsl',
     content: 'cmyk/to-hsl-content',
   },
@@ -57,7 +57,7 @@ export const converters: ConverterConfig[] = [
     title: 'CMYK to Pantone Color Converter',
     description:
       'Convert CMYK color values to their closest Pantone color matches with our efficient tool. Perfect for brand consistency across digital and print media.',
-    url: 'https://www.cmyktopantone.com/convert-cmyk-to-pantone-pms',
+    url: 'https://www.cmyktopantone.com/convert-cmyk-to-pantone-pms?ref=rgbtopantone.com',
     component: 'cmyk/to-pantone',
     content: 'cmyk/to-pantone-content',
   },
@@ -70,7 +70,7 @@ export const converters: ConverterConfig[] = [
     title: 'HEX to CMYK Color Converter',
     description:
       'Easily convert HEX to CMYK colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-hex-to-cmyk',
+    url: 'https://www.cmyktopantone.com/convert-hex-to-cmyk?ref=rgbtopantone.com',
     component: 'hex/to-cmyk',
     content: 'hex/to-cmyk-content',
   },
@@ -81,7 +81,7 @@ export const converters: ConverterConfig[] = [
     title: 'HEX to HSL Color Converter',
     description:
       'Easily convert HEX to HSL colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-hex-to-hsl',
+    url: 'https://www.cmyktopantone.com/convert-hex-to-hsl?ref=rgbtopantone.com',
     component: 'hex/to-hsl',
     content: 'hex/to-hsl-content',
   },
@@ -127,7 +127,7 @@ export const converters: ConverterConfig[] = [
     title: 'HSL to CMYK Color Converter',
     description:
       'Easily convert HSL to CMYK colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-hsl-to-cmyk',
+    url: 'https://www.cmyktopantone.com/convert-hsl-to-cmyk?ref=rgbtopantone.com',
     component: 'hsl/to-cmyk',
     content: 'hsl/to-cmyk-content',
   },
@@ -138,7 +138,7 @@ export const converters: ConverterConfig[] = [
     title: 'HSL to HEX Color Converter',
     description:
       'Easily convert HSL to HEX colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-hsl-to-hex',
+    url: 'https://www.cmyktopantone.com/convert-hsl-to-hex?ref=rgbtopantone.com',
     component: 'hsl/to-hex',
     content: 'hsl/to-hex-content',
   },
@@ -149,7 +149,7 @@ export const converters: ConverterConfig[] = [
     title: 'HSL to RGB Color Converter',
     description:
       'Easily convert HSL to RGB colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-hsl-to-rgb',
+    url: 'https://www.cmyktopantone.com/convert-hsl-to-rgb?ref=rgbtopantone.com',
     component: 'hsl/to-rgb',
     content: 'hsl/to-rgb-content',
   },
@@ -160,7 +160,7 @@ export const converters: ConverterConfig[] = [
     title: 'HSL to Pantone Color Converter',
     description:
       'Convert HSL color values to their closest Pantone color matches with our efficient tool. Perfect for brand consistency across digital and print media.',
-    url: 'https://www.cmyktopantone.com/convert-hsl-to-pantone-pms',
+    url: 'https://www.cmyktopantone.com/convert-hsl-to-pantone-pms?ref=rgbtopantone.com',
     component: 'hsl/to-pantone',
     content: 'hsl/to-pantone-content',
   },
@@ -173,7 +173,7 @@ export const converters: ConverterConfig[] = [
     title: 'HSV to CMYK Color Converter',
     description:
       'Easily convert HSV to CMYK colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-hsv-to-cmyk',
+    url: 'https://www.cmyktopantone.com/convert-hsv-to-cmyk?ref=rgbtopantone.com',
     component: 'hsv/to-cmyk',
     content: 'hsv/to-cmyk-content',
   },
@@ -241,7 +241,7 @@ export const converters: ConverterConfig[] = [
     title: 'RGB to HEX Color Converter',
     description:
       'Easily convert RGB to HEX colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-rgb-to-hex',
+    url: 'https://www.cmyktopantone.com/convert-rgb-to-hex?ref=rgbtopantone.com',
     component: 'rgb/to-hex',
     content: 'rgb/to-hex-content',
   },
@@ -252,7 +252,7 @@ export const converters: ConverterConfig[] = [
     title: 'RGB to HSL Color Converter',
     description:
       'Easily convert RGB to HSL colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: 'https://www.cmyktopantone.com/convert-rgb-to-hsl',
+    url: 'https://www.cmyktopantone.com/convert-rgb-to-hsl?ref=rgbtopantone.com',
     component: 'rgb/to-hsl',
     content: 'rgb/to-hsl-content',
   },
@@ -287,7 +287,7 @@ export const converters: ConverterConfig[] = [
     title: 'Pantone to CMYK Color Converter',
     description:
       'Convert Pantone color values to CMYK with our efficient tool. Perfect for brand consistency across digital and print media.',
-    url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-cmyk',
+    url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-cmyk?ref=rgbtopantone.com',
     component: 'pantone/to-cmyk',
   },
   {
@@ -297,7 +297,7 @@ export const converters: ConverterConfig[] = [
     title: 'Pantone to HEX Color Converter',
     description:
       'Convert Pantone color values to HEX with our efficient tool. Perfect for brand consistency across digital and print media.',
-    url: '/convert-pantone-pms-to-hex',
+    url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-hex?ref=rgbtopantone.com',
     component: 'pantone/to-hex',
   },
   {
@@ -307,7 +307,7 @@ export const converters: ConverterConfig[] = [
     title: 'Pantone to HSL Color Converter',
     description:
       'Convert Pantone color values to HSL with our efficient tool. Perfect for brand consistency across digital and print media.',
-    url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-hsl',
+    url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-hsl?ref=rgbtopantone.com',
     component: 'pantone/to-hsl',
   },
   {
@@ -317,7 +317,7 @@ export const converters: ConverterConfig[] = [
     title: 'Pantone to HSV Color Converter',
     description:
       'Convert Pantone color values to HSV with our efficient tool. Perfect for brand consistency across digital and print media.',
-    url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-hsv',
+    url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-hsv?ref=rgbtopantone.com',
     component: 'pantone/to-hsv',
   },
   {

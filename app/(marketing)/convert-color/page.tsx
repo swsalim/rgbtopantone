@@ -140,8 +140,8 @@ export default function ConvertColorsPage() {
                   frameBorder="0"
                   className="ta-widget"
                   data-min-height="250"
-                  id="67ee0a352dfc280f879388c3-6603"
-                  src="https://app.tinyadz.com/widgets/67ee0a352dfc280f879388c3?seed=6603&previewMode=false&showInPopup=false&theme=light"></iframe>
+                  id="682c9ba20aa965b6c299b272-2929"
+                  src="https://app.tinyadz.com/widgets/682c9ba20aa965b6c299b272?seed=2929&previewMode=false&showInPopup=false&theme=light"></iframe>
               </div>
             </Wrapper>
           )}

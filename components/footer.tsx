@@ -52,7 +52,7 @@ export default function Footer({ className, ...props }: FooterProps) {
                 <h2 className="text-base font-semibold text-gray-100">Pantone Colors</h2>
                 <ul role="list" className="mt-4 space-y-4 md:mt-6">
                   {navigation.pantone.map((item) => (
-                    <li key={item.name}>
+                    <li key={`footer-${item.name}`}>
                       <Link
                         href={`${item.href}`}
                         className="text-base/6 text-gray-300 transition hover:text-violet-400">
@@ -66,7 +66,7 @@ export default function Footer({ className, ...props }: FooterProps) {
                 <h3 className="text-base/6 font-semibold text-gray-100">Legal</h3>
                 <ul role="list" className="mt-4 space-y-4 md:mt-6">
                   {navigation.legal.map((item) => (
-                    <li key={item.name}>
+                    <li key={`footer-${item.name}`}>
                       <Link
                         href={item.href}
                         className="text-base/6 text-gray-300 transition hover:text-violet-400">
@@ -81,7 +81,7 @@ export default function Footer({ className, ...props }: FooterProps) {
               <h3 className="text-base/6 font-semibold text-gray-100">Our Projects</h3>
               <ul role="list" className="mt-4 space-y-4 md:mt-6">
                 {navigation.projects.map((item) => (
-                  <li key={item.name}>
+                  <li key={`footer-${item.name}`}>
                     <a
                       href={item.href}
                       className="text-base/6 text-gray-300 transition hover:text-violet-400"
