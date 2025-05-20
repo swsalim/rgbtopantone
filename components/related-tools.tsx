@@ -96,7 +96,7 @@ export default function RelatedTools() {
           return tool.url !== pathname ? (
             <Comp
               key={index}
-              href={tool.url}
+              href={tool.isExternal ? `${tool.url}?ref=rgbtopantone.com` : tool.url}
               target={tool.target}
               className="font-medium text-gray-700 transition hover:text-violet-600 dark:text-gray-300 dark:hover:text-violet-400">
               {tool.name}

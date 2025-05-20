@@ -2,6 +2,9 @@ import type { ComponentProps } from 'react';
 
 import Link from 'next/link';
 
+import { converters } from '@/config/converters';
+import { tools } from '@/config/tools';
+
 import { cn } from '@/lib/utils';
 
 import { Logo } from '@/components/icons';
@@ -13,32 +16,17 @@ const navigation = {
     { name: 'Terms of service', href: '/legal/terms-and-conditions' },
     { name: 'Privacy policy', href: '/legal/privacy-policy' },
   ],
-  projects: [
-    {
-      name: 'CMYK to Pantone Converter',
-      href: 'https://www.cmyktopantone.com/',
-    },
-    {
-      name: 'Sudoku Unlimited',
-      href: 'https://sudokuunlimited.com/',
-    },
-    {
-      name: 'Random Number App',
-      href: 'https://www.randomnumberapp.com/',
-    },
-    {
-      name: 'Will It Rain Tomorrow?',
-      href: 'https://www.willitraintomorrow.com/',
-    },
-    {
-      name: 'Water a Day',
-      href: 'https://www.wateraday.com/',
-    },
-    {
-      name: 'Clinic Geek',
-      href: 'https://www.clinicgeek.com/',
-    },
-  ],
+  pantone: converters
+    .filter((converter) => converter.sourceColor === 'PANTONE')
+    .map((converter) => ({
+      name: converter.title,
+      href: converter.url,
+    })),
+  projects: tools.map((tool) => ({
+    name: tool.title,
+    href: tool.href,
+    isExternal: tool.isExternal,
+  })),
 };
 
 interface FooterProps extends ComponentProps<'footer'> {
@@ -51,35 +39,51 @@ export default function Footer({ className, ...props }: FooterProps) {
   return (
     <footer className={cn('bg-gray-900', className)} {...props}>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
+        <div className="md:grid md:grid-cols-3 md:gap-8">
+          <div className="space-y-3 md:col-span-1 lg:col-span-1">
             <Logo className="size-9 text-white" />
             <p className="text-balance text-base/6 text-gray-100">
-              Get instant, accurate Pantone matches for your RGB colors.
+              Get instant, accurate Pantone matches for your CMYK colors.
             </p>
           </div>
-          <div className="mt-16 grid gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
+          <div className="mt-10 grid grid-cols-2 gap-8 md:col-span-2 md:mt-0 md:grid-cols-3">
             <div className="md:mt-0">
-              <h3 className="text-base/6 font-semibold text-gray-100">Legal</h3>
-              <ul role="list" className="mt-4 space-y-4 md:mt-6">
-                {navigation.legal.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-base/6 text-gray-300 transition hover:text-violet-400">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className="md:mt-0">
+                <h2 className="text-base font-semibold text-gray-100">Pantone Colors</h2>
+                <ul role="list" className="mt-4 space-y-4 md:mt-6">
+                  {navigation.pantone.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={`${item.href}`}
+                        className="text-base/6 text-gray-300 transition hover:text-violet-400">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-6 md:mt-8">
+                <h3 className="text-base/6 font-semibold text-gray-100">Legal</h3>
+                <ul role="list" className="mt-4 space-y-4 md:mt-6">
+                  {navigation.legal.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-base/6 text-gray-300 transition hover:text-violet-400">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="md:col-span-2 md:mt-0">
+            <div className="md:mt-0">
               <h3 className="text-base/6 font-semibold text-gray-100">Our Projects</h3>
               <ul role="list" className="mt-4 space-y-4 md:mt-6">
                 {navigation.projects.map((item) => (
                   <li key={item.name}>
                     <a
-                      href={`${item.href}?ref=rgbtopantone`}
+                      href={item.href}
                       className="text-base/6 text-gray-300 transition hover:text-violet-400"
                       target="_blank">
                       {item.name}
@@ -94,7 +98,7 @@ export default function Footer({ className, ...props }: FooterProps) {
           <p className="text-sm text-gray-300">
             &copy; {currentYear}{' '}
             <a
-              href="https://www.yuurrific.com?ref=rgbtopantone"
+              href="https://www.yuurrific.com?ref=rgbtopantone.com"
               className="font-medium text-violet-400 transition hover:text-violet-400"
               target="_blank">
               Yuurrific
