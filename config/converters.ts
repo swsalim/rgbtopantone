@@ -195,7 +195,7 @@ export const converters: ConverterConfig[] = [
     title: 'HSV to HSL Color Converter',
     description:
       'Easily convert HSV to HSL colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: '/convert-hsv-to-hsl',
+    url: 'https://www.cmyktopantone.com/convert-hsv-to-hsl?ref=rgbtopantone.com',
     component: 'hsv/to-hsl',
     content: 'hsv/to-hsl-content',
   },
@@ -230,7 +230,7 @@ export const converters: ConverterConfig[] = [
     title: 'RGB to CMYK Color Converter',
     description:
       'Easily convert RGB to CMYK colors with our fast and reliable tool. Achieve perfect color consistency for your design projects.',
-    url: '/convert-rgb-to-cmyk',
+    url: 'https://www.cmyktopantone.com/convert-rgb-to-cmyk?ref=rgbtopantone.com',
     component: 'rgb/to-cmyk',
     content: 'rgb/to-cmyk-content',
   },
@@ -267,17 +267,17 @@ export const converters: ConverterConfig[] = [
   //   component: 'rgb-hsv-converter',
   //   content: 'rgb-hsv-content',
   // },
-  {
-    id: 'rgb-to-pantone-pms',
-    sourceColor: 'RGB',
-    targetColor: 'PANTONE',
-    title: 'RGB to Pantone Color Converter',
-    description:
-      'Convert RGB color values to their closest Pantone color matches with our efficient tool. Perfect for brand consistency across digital and print media.',
-    url: '/',
-    component: 'rgb/to-pantone',
-    content: 'rgb/to-pantone-content',
-  },
+  //   {
+  //     id: 'rgb-to-pantone-pms',
+  //     sourceColor: 'RGB',
+  //     targetColor: 'PANTONE',
+  //     title: 'RGB to Pantone Color Converter',
+  //     description:
+  //       'Convert RGB color values to their closest Pantone color matches with our efficient tool. Perfect for brand consistency across digital and print media.',
+  //     url: '/',
+  //     component: 'rgb/to-pantone',
+  //     content: 'rgb/to-pantone-content',
+  //   },
 
   // PANTONE Converters
   {
