@@ -109,6 +109,10 @@ export default function RootLayout({
         <Footer />
         <Toaster />
         <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3799479098488751"
+          crossOrigin="anonymous"></script>
+        <script
           src="https://app.tinyadz.com/scripts/ads.js?siteId=680e5f4f03dfc972f26ed8e0"
           type="module"
           async></script>
