@@ -6,9 +6,10 @@ export default function RgbPantoneContent() {
       <h1>RGB to Pantone Conversion</h1>
       <p>
         Color plays a crucial role in every design, from digital platforms to print materials. The
-        RGB color model—based on Red, Green, and Blue light—is the backbone of digital design, used
-        to display colors on screens. Meanwhile, the Pantone Matching System (PMS) is the industry
-        standard for maintaining color consistency in printed and physical media.
+        <a href="https://www.cmyktopantone.com/color-models/rgb">RGB color model</a>—based on Red,
+        Green, and Blue light—is the backbone of digital design, used to display colors on screens.
+        Meanwhile, the Pantone Matching System (PMS) is the industry standard for maintaining color
+        consistency in printed and physical media.
       </p>
       <p>
         When transitioning designs from screens to print, maintaining color accuracy can be
@@ -17,9 +18,10 @@ export default function RgbPantoneContent() {
       </p>
       <h2>Why should you convert RGB to Pantone Colors in Design?</h2>
       <p>
-        Pantone colors bring unparalleled consistency to your designs, ensuring they translate
-        perfectly from digital to physical formats. RGB values can vary across devices and screens,
-        but Pantone provides a fixed reference for accurate color reproduction.
+        <a href="https://www.cmyktopantone.com/pantone-colors">Pantone colors</a> bring unparalleled
+        consistency to your designs, ensuring they translate perfectly from digital to physical
+        formats. RGB values can vary across devices and screens, but Pantone provides a fixed
+        reference for accurate color reproduction.
       </p>
       <p>
         This consistency is especially critical for branding. A slight variation in your logo’s
