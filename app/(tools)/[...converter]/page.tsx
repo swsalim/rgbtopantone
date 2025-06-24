@@ -20,9 +20,11 @@ interface ConverterPageProps {
 export async function generateStaticParams() {
   const converters = getAllConverters();
 
-  return converters.map((converter: ConverterConfig) => ({
-    converter: converter.url.split('/').filter(Boolean),
-  }));
+  return converters
+    .filter((converter: ConverterConfig) => !converter.isExternal)
+    .map((converter: ConverterConfig) => ({
+      converter: converter.url.split('/').filter(Boolean),
+    }));
 }
 
 export async function generateMetadata({ params }: ConverterPageProps): Promise<Metadata> {

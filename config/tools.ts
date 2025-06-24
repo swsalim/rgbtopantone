@@ -42,10 +42,10 @@ export const tools: Tool[] = [
     isExternal: true,
   },
   {
-    title: 'RGB to Pantone Converter',
-    href: 'https://www.rgbtopantone.com/?ref=rgbtopantone.com',
+    title: 'CMYK to Pantone Converter',
+    href: 'https://www.cmyktopantone.com/?ref=rgbtopantone.com',
     description:
-      'Get instant, accurate Pantone matches for your RGB colors. Perfect for designers, printers & creative professionals who need reliable color conversions.',
+      'Get instant, accurate Pantone matches for your CMYK colors. Perfect for designers, printers & creative professionals who need reliable color conversions.',
     isExternal: true,
   },
   {
@@ -69,7 +69,7 @@ export const tools: Tool[] = [
   // },
   {
     title: 'Pantone Color Match Game',
-    href: '/pantone-color-match',
+    href: 'https://www.cmyktopantone.com/pantone-color-match',
     description: 'Color Memory Match: Find the Pantone color pairs in a fun memory game.',
     icon: Gamepad2,
     iconClassName: 'text-pink-500',

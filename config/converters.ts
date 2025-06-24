@@ -7,6 +7,7 @@ export interface ConverterConfig {
   url: string;
   component: string;
   content?: string;
+  isExternal?: boolean;
 }
 
 export type ColorType = 'CMYK' | 'RGB' | 'HEX' | 'HSL' | 'HSV' | 'PANTONE';
@@ -27,6 +28,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-cmyk-to-hex?ref=rgbtopantone.com',
     component: 'cmyk/to-hex',
     content: 'cmyk/to-hex-content',
+    isExternal: true,
   },
   {
     id: 'cmyk-to-hsl',
@@ -38,6 +40,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-cmyk-to-hsl?ref=rgbtopantone.com',
     component: 'cmyk/to-hsl',
     content: 'cmyk/to-hsl-content',
+    isExternal: true,
   },
   {
     id: 'cmyk-to-rgb',
@@ -60,6 +63,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-cmyk-to-pantone-pms?ref=rgbtopantone.com',
     component: 'cmyk/to-pantone',
     content: 'cmyk/to-pantone-content',
+    isExternal: true,
   },
 
   // HEX Converters
@@ -73,6 +77,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-hex-to-cmyk?ref=rgbtopantone.com',
     component: 'hex/to-cmyk',
     content: 'hex/to-cmyk-content',
+    isExternal: true,
   },
   {
     id: 'hex-to-hsl',
@@ -84,6 +89,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-hex-to-hsl?ref=rgbtopantone.com',
     component: 'hex/to-hsl',
     content: 'hex/to-hsl-content',
+    isExternal: true,
   },
   {
     id: 'hex-to-hsv',
@@ -130,6 +136,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-hsl-to-cmyk?ref=rgbtopantone.com',
     component: 'hsl/to-cmyk',
     content: 'hsl/to-cmyk-content',
+    isExternal: true,
   },
   {
     id: 'hsl-to-hex',
@@ -141,6 +148,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-hsl-to-hex?ref=rgbtopantone.com',
     component: 'hsl/to-hex',
     content: 'hsl/to-hex-content',
+    isExternal: true,
   },
   {
     id: 'hsl-to-rgb',
@@ -152,6 +160,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-hsl-to-rgb?ref=rgbtopantone.com',
     component: 'hsl/to-rgb',
     content: 'hsl/to-rgb-content',
+    isExternal: true,
   },
   {
     id: 'hsl-to-pantone-pms',
@@ -163,6 +172,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-hsl-to-pantone-pms?ref=rgbtopantone.com',
     component: 'hsl/to-pantone',
     content: 'hsl/to-pantone-content',
+    isExternal: true,
   },
 
   // HSV Converters
@@ -176,6 +186,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-hsv-to-cmyk?ref=rgbtopantone.com',
     component: 'hsv/to-cmyk',
     content: 'hsv/to-cmyk-content',
+    isExternal: true,
   },
   {
     id: 'hsv-to-hex',
@@ -198,6 +209,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-hsv-to-hsl?ref=rgbtopantone.com',
     component: 'hsv/to-hsl',
     content: 'hsv/to-hsl-content',
+    isExternal: true,
   },
   {
     id: 'hsv-to-rgb',
@@ -233,6 +245,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-rgb-to-cmyk?ref=rgbtopantone.com',
     component: 'rgb/to-cmyk',
     content: 'rgb/to-cmyk-content',
+    isExternal: true,
   },
   {
     id: 'rgb-to-hex',
@@ -244,6 +257,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-rgb-to-hex?ref=rgbtopantone.com',
     component: 'rgb/to-hex',
     content: 'rgb/to-hex-content',
+    isExternal: true,
   },
   {
     id: 'rgb-to-hsl',
@@ -255,6 +269,7 @@ export const converters: ConverterConfig[] = [
     url: 'https://www.cmyktopantone.com/convert-rgb-to-hsl?ref=rgbtopantone.com',
     component: 'rgb/to-hsl',
     content: 'rgb/to-hsl-content',
+    isExternal: true,
   },
   // {
   //   id: 'rgb-to-hsv',
@@ -289,6 +304,7 @@ export const converters: ConverterConfig[] = [
       'Convert Pantone color values to CMYK with our efficient tool. Perfect for brand consistency across digital and print media.',
     url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-cmyk?ref=rgbtopantone.com',
     component: 'pantone/to-cmyk',
+    isExternal: true,
   },
   {
     id: 'pantone-pms-to-hex',
@@ -299,6 +315,7 @@ export const converters: ConverterConfig[] = [
       'Convert Pantone color values to HEX with our efficient tool. Perfect for brand consistency across digital and print media.',
     url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-hex?ref=rgbtopantone.com',
     component: 'pantone/to-hex',
+    isExternal: true,
   },
   {
     id: 'pantone-pms-to-hsl',
@@ -309,6 +326,7 @@ export const converters: ConverterConfig[] = [
       'Convert Pantone color values to HSL with our efficient tool. Perfect for brand consistency across digital and print media.',
     url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-hsl?ref=rgbtopantone.com',
     component: 'pantone/to-hsl',
+    isExternal: true,
   },
   {
     id: 'pantone-pms-to-hsv',
@@ -319,6 +337,7 @@ export const converters: ConverterConfig[] = [
       'Convert Pantone color values to HSV with our efficient tool. Perfect for brand consistency across digital and print media.',
     url: 'https://www.cmyktopantone.com/convert-pantone-pms-to-hsv?ref=rgbtopantone.com',
     component: 'pantone/to-hsv',
+    isExternal: true,
   },
   {
     id: 'pantone-pms-to-rgb',
