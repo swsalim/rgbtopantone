@@ -18,13 +18,13 @@ export const tools: Tool[] = [
   },
   {
     title: 'Bye Indonesia',
-    href: 'https://www.byeindonesia.com/?ref=cmyktopantone',
+    href: 'https://www.byeindonesia.com/?ref=rgbtopantone.com',
     description: 'Renunciation of Indonesian Citizenship Guide',
     isExternal: true,
   },
   {
     title: 'Indie World Map',
-    href: 'https://www.indieworldmap.com/?ref=cmyktopantone',
+    href: 'https://www.indieworldmap.com/?ref=rgbtopantone.com',
     description: 'Discover & explore indie hacker projects globally.',
     isExternal: true,
   },
@@ -75,7 +75,7 @@ export const tools: Tool[] = [
   },
   {
     title: 'mainan.fun',
-    href: 'https://www.mainan.fun/?ref=cmyktopantone',
+    href: 'https://www.mainan.fun/?ref=rgbtopantone.com',
     description:
       "Mainan is where you'll discover handpicked educational toys that blends learning with fun. Perfect picks for curious minds are just a click away!",
     isExternal: true,
