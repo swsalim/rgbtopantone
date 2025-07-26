@@ -74,6 +74,12 @@ export const tools: Tool[] = [
     isExternal: true,
   },
   {
+    title: 'Keyword Gap',
+    href: 'https://www.keywordgap.com/?ref=rgbtopantone.com',
+    description: 'Validate your idea with competitor keyword analysis report done for you.',
+    isExternal: true,
+  },
+  {
     title: 'mainan.fun',
     href: 'https://www.mainan.fun/?ref=rgbtopantone.com',
     description:
