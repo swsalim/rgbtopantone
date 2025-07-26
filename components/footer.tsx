@@ -94,6 +94,18 @@ export default function Footer({ className, ...props }: FooterProps) {
             </div>
           </div>
         </div>
+        <div className="mt-16 flex flex-row flex-wrap gap-4 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+          <div className="shrink-0">
+            <a href="https://twelve.tools" target="_blank">
+              <img
+                src="https://twelve.tools/badge0-dark.svg"
+                alt="Featured on Twelve Tools"
+                width="200"
+                height="54"
+              />
+            </a>
+          </div>
+        </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-sm text-gray-300">
             &copy; {currentYear}{' '}
