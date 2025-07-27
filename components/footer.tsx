@@ -100,9 +100,35 @@ export default function Footer({ className, ...props }: FooterProps) {
               <img
                 src="https://twelve.tools/badge0-dark.svg"
                 alt="Featured on Twelve Tools"
-                width="200"
-                height="54"
+                width="120"
+                height="34"
               />
+            </a>
+          </div>
+          <div className="shrink-0">
+            <a href="https://theindiewall.net" target="_blank">
+              <img
+                src="https://theindiewall.net/indiewall.svg"
+                alt="IndieWall"
+                width="100"
+                height="34"
+              />
+            </a>
+          </div>
+          <div className="shrink-0">
+            <a href="https://liiinks.net" target="_blank">
+              <svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="40" rx="8" fill="#667eea" />
+                <text
+                  x="60"
+                  y="25"
+                  font-family="Arial, sans-serif"
+                  font-size="12"
+                  fill="white"
+                  text-anchor="middle">
+                  Liiinks
+                </text>
+              </svg>
             </a>
           </div>
         </div>
