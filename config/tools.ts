@@ -111,6 +111,13 @@ export const tools: Tool[] = [
     description: 'Dental clinics directory in Malaysia',
     isExternal: true,
   },
+  {
+    title: 'What Is My Screen Size?',
+    href: 'https://www.whatismyscreensize.com/?ref=rgbtopantone.com',
+    description:
+      "Instantly discover your device's screen dimensions, resolution, and display specifications. Free tool to check screen size, pixel density, and more.",
+    isExternal: true,
+  },
   // {
   //   title: 'Color Blindness Simulator',
   //   href: '/color-blindness',
