@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
-import Image from 'next/image';
 
 import { siteConfig } from '@/config/site';
 
@@ -78,12 +77,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="//ik.imagekit.io" />
-        <link rel="preconnect" href="//scripts.simpleanalyticscdn.com" />
-        <link rel="preconnect" href="//queue.simpleanalyticscdn.com" />
+        <link rel="preconnect" href="//cdn.seline.com" />
         <link rel="preconnect" href="//analytics.ahrefs.com" />
         <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
-        <link rel="dns-prefetch" href="//queue.simpleanalyticscdn.com" />
-        <link rel="dns-prefetch" href="//scripts.simpleanalyticscdn.com" />
+        <link rel="dns-prefetch" href="//cdn.seline.com" />
         <link rel="dns-prefetch" href="//ik.imagekit.io" />
         <LogoJsonLd logo={absoluteUrl('/icons/logo.png')} url={absoluteUrl()} />
         <script
@@ -119,18 +116,6 @@ export default function RootLayout({
           async></script>
         <script async src="https://app.tinyadz.com/libs/widget.js" type="module"></script>
         <script async src="https://app.tinyadz.com/libs/manager.js" type="module"></script>
-        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-        {/* <script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script> */}
-        <noscript>
-          <Image
-            src="https://queue.simpleanalyticscdn.com/noscript.gif"
-            alt=""
-            referrerPolicy="no-referrer-when-downgrade"
-            width="1"
-            height="1"
-            unoptimized
-          />
-        </noscript>
       </body>
     </html>
   );
