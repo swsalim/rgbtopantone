@@ -6,14 +6,14 @@ const faqs = [
     category: 'General',
     question: 'What is this tool for?',
     answer:
-      "Not happy with your photo? Try flipping it! A quick horizontal or vertical flip can transform your image, adding a fresh perspective or creating an entirely new visual effect. It's an easy way to breathe new life into a shot that didn't quite work the first time.",
+      'This tool helps you convert RGB values to the closest Pantone color so your digital designs can be translated into reliable print references.',
   },
   {
     id: 6,
     category: 'General',
-    question: 'When would you need to flip an image?',
+    question: 'When should I convert RGB to Pantone?',
     answer:
-      "Have you ever looked at a photo and thought, \"Something just doesn't feel right\"? Sometimes, simply flipping an image can work magic. It's like giving your picture a quick makeover. When you flip a photo, you can change how it catches your eye. We naturally tend to scan images from left to right, so a flip can make the photo feel more balanced and interesting. It's almost like rearranging furniture - a small change that can completely transform the feel of the whole scene.",
+      'Convert RGB to Pantone whenever a project moves from screens to print, such as packaging, branded merchandise, signage, and press-ready files.',
   },
   {
     id: 2,
@@ -24,15 +24,16 @@ const faqs = [
   {
     id: 3,
     category: 'General',
-    question: 'What file formats are supported?',
-    answer: 'You can upload images in popular formats like JPEG, PNG, and WebP.',
+    question: 'Do I get an exact Pantone match every time?',
+    answer:
+      'Not always. Some RGB colors do not have a one-to-one Pantone equivalent, so we show the closest matches with a similarity score.',
   },
   {
     id: 4,
     category: 'General',
-    question: 'Will my uploaded images be stored on the server?',
+    question: 'Are my inputs stored?',
     answer:
-      'No, your images are processed in real-time and not stored on our servers to ensure your privacy.',
+      'No. Color values are processed instantly in the browser workflow and are not stored as uploaded files.',
   },
 ];
 
@@ -42,13 +43,13 @@ export default function GeneralFaqs() {
       <FaqJsonLd questionListElement={faqs} />
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-base/7 font-medium text-violet-600 dark:text-violet-400">
-          You have full rights and ownership of your photos
+          Built for designers, printers, and brand teams
         </p>
         <h2 className="mt-2 text-pretty text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100">
           Frequently asked questions
         </h2>
         <p className="mt-6 text-base/7 text-gray-500 dark:text-gray-300">
-          Answers to common questions about our free image flipper.
+          Answers to common questions about RGB to Pantone conversion.
         </p>
       </div>
       <div className="mt-20">

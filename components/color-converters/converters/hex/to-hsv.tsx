@@ -62,10 +62,13 @@ export default function HexHsvConverter() {
   return (
     <Wrapper size="lg">
       <Container>
-        <p>
-          Easily transform your HEX values into HSV values! Enter your HEX values below and get
-          instant, accurate results.
-        </p>
+        <div className="prose dark:prose-invert">
+          <h1>HEX to HSV Converter</h1>
+          <p>
+            Easily transform your HEX values into HSV values. Enter your HEX values below and get
+            instant, accurate results.
+          </p>
+        </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <Card>
             <CardContent>

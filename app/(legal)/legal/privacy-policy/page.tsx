@@ -69,57 +69,48 @@ export default function Page() {
           <Prose>
             <h1>Privacy Policy</h1>
             <p>
-              At rgbtopantone.com, we are committed to protecting your privacy.
-              This Privacy Policy outlines how we collect, use, and disclose
-              information when you use our website.
+              This Privacy Policy explains how RGB Pantone collects, uses, and protects information
+              when you use rgbtopantone.com.
             </p>
             <h2>Information We Collect</h2>
             <p>
-              We may collect various types of information from you, including
-              but not limited to:
+              We collect limited information required to run and improve the website:
             </p>
             <ul>
               <li>
-                Personal information such as your name, email address, and
-                contact details, which you provide voluntarily when contacting
-                us or signing up for our services.
+                Contact details you provide voluntarily when you email support, such as your email
+                address.
               </li>
               <li>
-                Usage information, including your IP address, browser type,
-                device type, and interactions with our website, collected
-                through cookies and similar technologies.
+                Technical and usage data, including browser type, device information, pages viewed,
+                and approximate IP-based location.
               </li>
             </ul>
             <h2>How We Use Your Information</h2>
             <p>
-              We may use the information we collect for various purposes,
-              including but not limited to:
+              We use this information to:
             </p>
             <ul>
-              <li>Providing and improving our services</li>
-              <li>Communicating with you</li>
-              <li>Personalizing your experienc</li>
-              <li>Analyzing usage trends and preferences</li>
+              <li>Operate and improve our color converter tools.</li>
+              <li>Respond to support requests.</li>
+              <li>Measure site performance, traffic, and feature usage.</li>
+              <li>Maintain security, prevent abuse, and comply with legal obligations.</li>
             </ul>
             <h2>Information Sharing and Disclosure</h2>
             <p>
-              We may share your information with third-party service providers
-              who assist us in operating our website and providing our services.
-              We may also disclose information in response to legal requests or
-              to protect our rights.
+              We may share information with service providers that help us host, secure, or analyze
+              the website. We may also disclose information when required by law or to protect our
+              legal rights.
             </p>
             <h2>Third-Party Services</h2>
             <p>
-              Our website may contain links to third-party websites or services
-              that are not operated by us. We have no control over, and assume
-              no responsibility for, the content, privacy policies, or practices
-              of any third-party sites or services.
+              Our website may link to third-party tools and sites. Their privacy practices are
+              governed by their own policies, not this one.
             </p>
             <h2>Changes to This Privacy Policy</h2>
             <p>
-              We reserve the right to update or modify this Privacy Policy at
-              any time. Any changes will be effective immediately upon posting
-              to this page.
+              We may update this policy from time to time. Any changes become effective when posted
+              on this page.
             </p>
             <p>
               If you have any questions or concerns about this Privacy Policy,
@@ -134,9 +125,10 @@ export default function Page() {
               .
             </p>
 
-            <p>Thank you for using rgbtopantone.com!</p>
-
-            <p>All uploaded data is deleted instantly. We save no images</p>
+            <p>
+              We do not require account creation for core conversion features. Inputs are processed
+              for conversion and are not stored as uploaded media files.
+            </p>
           </Prose>
         </Container>
       </Wrapper>

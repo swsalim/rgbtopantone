@@ -3,7 +3,7 @@ import { Container } from '@/components/container';
 export default function HsvRgbContent() {
   return (
     <Container as="section" className="prose pb-12 dark:prose-invert md:pb-24">
-      <h1>HSV to RGB Conversion</h1>
+      <h2>HSV to RGB Conversion</h2>
       <p>
         In the realm of digital design and development, understanding how different color models
         work is essential. The HSV (Hue, Saturation, Value) model is often used for its intuitive

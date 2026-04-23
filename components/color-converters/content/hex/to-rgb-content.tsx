@@ -3,7 +3,7 @@ import { Container } from '@/components/container';
 export default function HexRgbContent() {
   return (
     <Container as="section" className="prose pb-12 dark:prose-invert md:pb-24">
-      <h1>Hex to RGB Conversion</h1>
+      <h2>Hex to RGB Conversion</h2>
       <p>
         Accurate color representation is vital in design, whether you're working on digital
         platforms or developing physical assets. The HEX color model, a six-character code, is

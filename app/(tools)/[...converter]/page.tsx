@@ -6,8 +6,11 @@ import { ConverterConfig, getAllConverters, getConverterByUrl } from '@/config/c
 import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
+import { getConverterFaqs } from '@/lib/converter-faq';
 
 import { DynamicConverter } from '@/components/dynamic-converter';
+import Faqs from '@/components/faq';
+import { Container } from '@/components/container';
 import WebsiteJsonLd from '@/components/structured-data/WebsiteJsonLd';
 import { Wrapper } from '@/components/wrapper';
 
@@ -89,6 +92,7 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
         ssr: true,
       })
     : null;
+  const faqItems = getConverterFaqs(converterConfig.sourceColor, converterConfig.targetColor);
 
   return (
     <>
@@ -110,6 +114,11 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
         </Wrapper>
       )}
       {ContentComponent && <ContentComponent />}
+      <Wrapper>
+        <Container>
+          <Faqs data={faqItems} />
+        </Container>
+      </Wrapper>
     </>
   );
 }

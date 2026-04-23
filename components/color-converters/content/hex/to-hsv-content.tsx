@@ -3,7 +3,7 @@ import { Container } from '@/components/container';
 export default function HexHsvContent() {
   return (
     <Container as="section" className="prose pb-12 dark:prose-invert md:pb-24">
-      <h1>Hex to HSV Conversion</h1>
+      <h2>Hex to HSV Conversion</h2>
       <p>
         In the field of design and color theory, understanding different color models is crucial for
         achieving the desired visual impact. The{' '}

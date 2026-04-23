@@ -4,12 +4,13 @@ import { useEffect, useState } from 'react';
 
 import { CopyIcon, Info } from 'lucide-react';
 
-import { findMatchingPMSColors, rgbToHex } from '@/lib/colors';
+import { findMatchingPMSColors, rgbToCmyk, rgbToHex, rgbToHsl, rgbToHsv } from '@/lib/colors';
 import { useToast } from '@/lib/hooks/use-toast';
 
 import BannerMatching from '@/components/ads/banner-matching';
 import { ColorPreview } from '@/components/color-converters/shared/color-preview';
 import { PantoneColorCard } from '@/components/color-converters/shared/pantone-color-card';
+import { PantoneComparisonCard } from '@/components/color-converters/shared/pantone-comparison-card';
 import { Container } from '@/components/container';
 import RelatedTools from '@/components/related-tools';
 import { Button } from '@/components/ui/button';
@@ -42,7 +43,13 @@ export default function RgbPantoneConverter() {
   const [visibleCount, setVisibleCount] = useState(15);
 
   const hex = rgbToHex(rgb);
+  const cmyk = rgbToCmyk(rgb);
+  const hsl = rgbToHsl(rgb);
+  const hsv = rgbToHsv(rgb);
   const rgbString = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+  const cmykString = `cmyk(${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%)`;
+  const hslString = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+  const hsvString = `hsv(${hsv.h}, ${hsv.s}, ${hsv.v})`;
 
   const handleInputChange = (key: keyof typeof rgb, value: string) => {
     const numValue = Math.min(255, Math.max(0, Number(value) || 0));
@@ -72,10 +79,13 @@ export default function RgbPantoneConverter() {
   return (
     <Wrapper size="lg">
       <Container>
-        <p>
-          Transform your RGB values into Pantone perfection with instant, accurate results. Find the
-          closest Pantone matches for your RGB color.
-        </p>
+        <div className="prose dark:prose-invert">
+          <h1>RGB to Pantone Converter</h1>
+          <p>
+            Transform your RGB values into Pantone perfection with instant, accurate results. Find
+            the closest Pantone matches for your RGB color.
+          </p>
+        </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <div>
             <Card>
@@ -264,6 +274,30 @@ export default function RgbPantoneConverter() {
           </Card>
         </div>
       </Container>
+
+      {matchingColors.length > 0 && (
+        <Container className="prose mt-16 dark:prose-invert">
+          <h2 className="text-center">Color Comparison</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <PantoneComparisonCard
+              title="Original RGB Color"
+              cmyk={cmykString}
+              rgb={rgbString}
+              hex={hex}
+              hsl={hslString}
+              hsv={hsvString}
+            />
+
+            <PantoneComparisonCard
+              title={`Best Pantone Match (${matchingColors[0].pantone})`}
+              pantone={matchingColors[0].pantone}
+              hex={matchingColors[0].hex}
+              deltaE={`${(((100 - matchingColors[0].matchPercentage) / 100) * 2.1).toFixed(3)} (Excellent match)`}
+            />
+          </div>
+        </Container>
+      )}
+
       <Container className="flex flex-col items-start gap-4 py-8 md:flex-row md:items-start">
         <RelatedTools />
       </Container>

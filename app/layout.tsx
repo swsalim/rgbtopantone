@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Figtree, Fraunces } from 'next/font/google';
 
 import { siteConfig } from '@/config/site';
 
@@ -14,9 +14,14 @@ import { Toaster } from '@/components/ui/toaster';
 
 import './globals.css';
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const figtree = Figtree({
   subsets: ['latin'],
   variable: '--font-sans',
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-heading',
 });
 
 export const metadata: Metadata = {
@@ -95,7 +100,8 @@ export default function RootLayout({
       <body
         className={cn(
           'flex min-h-screen flex-col font-sans antialiased dark:bg-gray-900 dark:text-gray-100',
-          plusJakartaSans.variable,
+          figtree.variable,
+          fraunces.variable,
         )}
         suppressHydrationWarning>
         <RotatingBanner />

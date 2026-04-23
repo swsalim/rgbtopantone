@@ -3,7 +3,7 @@ import { Container } from '@/components/container';
 export default function HsvHexContent() {
   return (
     <Container as="section" className="prose pb-12 dark:prose-invert md:pb-24">
-      <h1>HSV to HEX Conversion</h1>
+      <h2>HSV to HEX Conversion</h2>
       <p>
         In the world of design and development, understanding different color models is vital for
         creating visually consistent and appealing results. The HSV (Hue, Saturation, Value) model

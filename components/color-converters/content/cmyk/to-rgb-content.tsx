@@ -3,7 +3,7 @@ import { Container } from '@/components/container';
 export default function CmykRgbContent() {
   return (
     <Container as="section" className="prose pb-12 dark:prose-invert md:pb-24">
-      <h1>CMYK to RGB Conversion</h1>
+      <h2>CMYK to RGB Conversion</h2>
       <p>
         In the realm of design and printing, accurate color conversion is essential for ensuring
         that your designs look perfect, whether on digital screens or in physical print materials.

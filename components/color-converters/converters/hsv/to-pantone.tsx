@@ -80,10 +80,13 @@ export default function HsvPantoneConverter() {
   return (
     <Wrapper size="lg">
       <Container>
-        <p>
-          Transform your HSV values into Pantone perfection with instant, accurate results. Find the
-          closest Pantone matches for your HSV color.
-        </p>
+        <div className="prose dark:prose-invert">
+          <h1>HSV to Pantone Converter</h1>
+          <p>
+            Transform your HSV values into Pantone perfection with instant, accurate results. Find
+            the closest Pantone matches for your HSV color.
+          </p>
+        </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <div>
             <Card>

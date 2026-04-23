@@ -68,10 +68,13 @@ export default function HsvRgbConverter() {
   return (
     <Wrapper size="lg">
       <Container>
-        <p>
-          Easily transform your HSV values into RGB values! Enter your HSV values below and get
-          instant, accurate results.
-        </p>
+        <div className="prose dark:prose-invert">
+          <h1>HSV to RGB Converter</h1>
+          <p>
+            Easily transform your HSV values into RGB values. Enter your HSV values below and get
+            instant, accurate results.
+          </p>
+        </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <Card>
             <CardContent>

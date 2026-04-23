@@ -3,7 +3,7 @@ import { Container } from '@/components/container';
 export default function HexPantoneContent() {
   return (
     <Container as="section" className="prose pb-12 dark:prose-invert md:pb-24">
-      <h1>Hex to Pantone Conversion</h1>
+      <h2>Hex to Pantone Conversion</h2>
       <p>
         In the world of design, accurate color representation is crucial, whether you’re working on
         digital platforms or physical print materials. The HEX color model, commonly used in web

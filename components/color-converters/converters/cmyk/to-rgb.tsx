@@ -70,10 +70,13 @@ export default function CmykRgbConverter() {
   return (
     <Wrapper size="lg">
       <Container>
-        <p>
-          Easily transform your CMYK values into RGB values! Enter your CMYK values below and get
-          instant, accurate results.
-        </p>
+        <div className="prose dark:prose-invert">
+          <h1>CMYK to RGB Converter</h1>
+          <p>
+            Easily transform your CMYK values into RGB values. Enter your CMYK values below and get
+            instant, accurate results.
+          </p>
+        </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <Card>
             <CardContent>

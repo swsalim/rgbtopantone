@@ -70,22 +70,19 @@ export default function Page() {
           <Prose>
             <h1>Terms of Service</h1>
             <p>
-              Welcome to rgbtopantone.com! These Terms of Service govern your
-              use of our website and services. By accessing or using our site,
-              you agree to comply with these terms.
+              These Terms of Service govern your use of rgbtopantone.com and related tools. By
+              accessing this website, you agree to these terms.
             </p>
             <h2>Acceptance of Terms</h2>
             <p>
-              By accessing or using rgbtopantone.com, you agree to these Terms
-              of Service and any additional terms and conditions that may apply
-              to specific sections of the site or to products and services
-              offered through the site.
+              You must use the site in compliance with all applicable laws. If you do not agree
+              with these terms, do not use the website.
             </p>
             <h2>Use of Cookies</h2>
             <p>
-              rgbtopantone.com uses cookies to enhance your browsing experience
-              and provide personalized content. By using our site, you consent
-              to the use of cookies in accordance with our{' '}
+              rgbtopantone.com may use cookies and analytics technologies to improve user
+              experience and site performance. By using the site, you consent to this use as
+              described in our{' '}
               <Link
                 href="/legal/privacy-policy"
                 className="text-violet-600 hover:text-violet-600 dark:text-violet-400 dark:hover:text-violet-500"
@@ -96,29 +93,20 @@ export default function Page() {
             </p>
             <h2>Intellectual Property</h2>
             <p>
-              All content on rgbtopantone.com, including text, graphics, logos,
-              images, audio clips, digital downloads, and software, is the
-              property of rgbtopantone.com or its content suppliers and is
-              protected by international copyright laws.
+              All website content, including text, branding, code, graphics, and layout, is owned
+              by rgbtopantone.com or its licensors and is protected by applicable intellectual
+              property laws.
             </p>
             <h2>Limitation of Liability</h2>
             <p>
-              rgbtopantone.com and its affiliates shall not be liable for any
-              indirect, incidental, special, consequential, or punitive damages,
-              or any loss of profits or revenues, whether incurred directly or
-              indirectly, or any loss of data, use, goodwill, or other
-              intangible losses resulting from (i) your access to or use of or
-              inability to access or use the site; (ii) any conduct or content
-              of any third party on the site; or (iii) unauthorized access, use,
-              or alteration of your transmissions or content.
+              The site is provided on an "as is" and "as available" basis. To the fullest extent
+              permitted by law, rgbtopantone.com is not liable for indirect, incidental, or
+              consequential damages arising from use of the site.
             </p>
             <h2>Changes to Terms</h2>
             <p>
-              We reserve the right to update or modify these Terms of Service at
-              any time without prior notice. Any changes will be effective
-              immediately upon posting to this page. Your continued use of
-              rgbtopantone.com after any such changes constitutes your
-              acceptance of the new Terms of Service.
+              We may update these terms at any time. Continued use of the site after updates are
+              posted means you accept the revised terms.
             </p>
           </Prose>
         </Container>

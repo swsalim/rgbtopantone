@@ -77,10 +77,13 @@ export default function HexPantoneConverter() {
   return (
     <Wrapper size="lg">
       <Container>
-        <p>
-          Transform your HEX values into Pantone perfection with instant, accurate results. Find the
-          closest Pantone matches for your HEX color.
-        </p>
+        <div className="prose dark:prose-invert">
+          <h1>HEX to Pantone Converter</h1>
+          <p>
+            Transform your HEX values into Pantone perfection with instant, accurate results. Find
+            the closest Pantone matches for your HEX color.
+          </p>
+        </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <div>
             <Card>
