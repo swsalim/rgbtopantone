@@ -44,7 +44,7 @@ export default function Footer({ className, ...props }: FooterProps) {
           <div className="space-y-3 md:col-span-1 lg:col-span-1">
             <Logo className="size-9 text-white" />
             <p className="text-balance text-base/6 text-gray-100">
-              Get instant, accurate Pantone matches for your CMYK colors.
+              Get instant, accurate Pantone matches for your RGB colors.
             </p>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-8 md:col-span-2 md:mt-0 md:grid-cols-3">
