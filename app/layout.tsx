@@ -120,6 +120,7 @@ export default function RootLayout({
           async></script>
         <script async src="https://app.tinyadz.com/libs/widget.js" type="module"></script>
         <script async src="https://app.tinyadz.com/libs/manager.js" type="module"></script>
+        <script async src="https://badge-relay.swsalim.workers.dev/widget.js"></script>
       </body>
     </html>
   );

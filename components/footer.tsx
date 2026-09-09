@@ -133,6 +133,13 @@ export default function Footer({ className, ...props }: FooterProps) {
             </a>
           </div>
         </div>
+
+        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+          <div
+            data-badgerelay-site="site_live_xYEYREFClUowHLltyHz8uw"
+            data-badgerelay-layout="carousel"
+          />
+        </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-sm leading-5 text-gray-100">
             &copy; {currentYear} {siteConfig.siteName}.
