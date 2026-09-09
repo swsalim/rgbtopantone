@@ -10,6 +10,8 @@ import { cn } from '@/lib/utils';
 
 import { Logo } from '@/components/icons';
 
+import { BadgeRelaySite } from './badge-relay-site';
+
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const navigation = {
@@ -135,9 +137,10 @@ export default function Footer({ className, ...props }: FooterProps) {
         </div>
 
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <div
-            data-badgerelay-site="site_live_xYEYREFClUowHLltyHz8uw"
-            data-badgerelay-layout="carousel"
+          <BadgeRelaySite
+            siteKey="site_live_xYEYREFClUowHLltyHz8uw"
+            apiBase="https://badge-relay.swsalim.workers.dev"
+            revalidateSeconds={30}
           />
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
