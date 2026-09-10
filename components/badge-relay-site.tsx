@@ -20,6 +20,7 @@ type PublicConfig = {
   configVersion: number;
   appearance: {
     layout: 'carousel' | 'row';
+    theme: 'auto' | 'light' | 'dark';
     badgeHeight: number;
     gap: number;
     alignment: 'left' | 'center' | 'right';
@@ -66,76 +67,92 @@ export async function BadgeRelaySite({
   }
 
   const badges = config.badges.slice(0, 50);
+  const theme = config.appearance.theme || 'auto';
   const justify =
     config.appearance.alignment === 'left'
       ? 'flex-start'
       : config.appearance.alignment === 'right'
         ? 'flex-end'
         : 'center';
+  const muted = theme === 'dark' ? '#a1a1aa' : theme === 'light' ? '#71717a' : undefined;
 
   return (
     <div
       data-badgerelay-ssr={siteKey}
       data-br-config-version={config.configVersion}
+      data-br-theme={theme}
       className={className}
       style={{
         width: '100%',
         fontFamily: 'ui-sans-serif, system-ui, sans-serif',
         fontSize: 14,
         lineHeight: 1.4,
+        ['--br-muted' as string]: muted || '#71717a',
       }}>
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          justifyContent: justify,
-          gap: config.appearance.gap,
-        }}>
-        {badges.map((badge) => (
-          <a
-            key={badge.id}
-            href={badge.targetUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={badge.name}
-            style={{ display: 'inline-flex', flex: '0 0 auto' }}>
-            {/* Host sites may replace with next/image if desired */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={badge.imageUrl}
-              alt={badge.alt || badge.name}
-              width={badge.width}
-              height={badge.height}
-              loading="lazy"
-              decoding="async"
-              style={{
-                display: 'block',
-                height: config.appearance.badgeHeight,
-                width: 'auto',
-                maxWidth: 240,
-                objectFit: 'contain',
-              }}
-            />
-          </a>
-        ))}
-      </div>
-      {config.showAttribution ? (
-        <div style={{ marginTop: 8 }}>
-          <a
-            href={`${apiBase.replace(/\/$/, '')}/?utm_source=widget&utm_medium=powered_by&utm_campaign=free_site`}
-            target="_blank"
-            rel="nofollow noopener"
-            style={{
-              color: '#71717a',
-              textDecoration: 'underline',
-              textUnderlineOffset: 2,
-              fontSize: 14,
-            }}>
-            Powered by BadgeRelay
-          </a>
-        </div>
+      {theme === 'auto' ? (
+        <style>{`@media (prefers-color-scheme: dark) {[data-badgerelay-ssr="${siteKey}"]{--br-muted:#a1a1aa}}`}</style>
       ) : null}
+      <div style={{ display: 'flex', width: '100%', justifyContent: justify }}>
+        <div
+          style={{
+            display: 'inline-flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            maxWidth: '100%',
+          }}>
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              gap: config.appearance.gap,
+            }}>
+            {badges.map((badge) => (
+              <a
+                key={badge.id}
+                href={badge.targetUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={badge.name}
+                style={{ display: 'inline-flex', flex: '0 0 auto' }}>
+                {/* Host sites may replace with next/image if desired */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={badge.imageUrl}
+                  alt={badge.alt || badge.name}
+                  width={badge.width ?? 120}
+                  height={badge.height ?? 40}
+                  loading="lazy"
+                  decoding="async"
+                  style={{
+                    display: 'block',
+                    height: config.appearance.badgeHeight,
+                    width: 'auto',
+                    maxWidth: 240,
+                    objectFit: 'contain',
+                  }}
+                />
+              </a>
+            ))}
+          </div>
+          {config.showAttribution ? (
+            <div style={{ marginTop: 8 }}>
+              <a
+                href={`${apiBase.replace(/\/$/, '')}/?utm_source=widget&utm_medium=powered_by&utm_campaign=free_site`}
+                target="_blank"
+                rel="nofollow noopener"
+                style={{
+                  color: 'var(--br-muted)',
+                  textDecoration: 'underline',
+                  textUnderlineOffset: 2,
+                  fontSize: 14,
+                }}>
+                Powered by BadgeRelay
+              </a>
+            </div>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 }
