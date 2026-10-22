@@ -3,6 +3,7 @@ import type { ComponentProps } from 'react';
 import Link from 'next/link';
 
 import { converters } from '@/config/converters';
+import { pantoneDisclaimer } from '@/config/legal';
 import { siteConfig } from '@/config/site';
 import { tools } from '@/config/tools';
 
@@ -129,6 +130,9 @@ export default function Footer({ className, ...props }: FooterProps) {
                 Seline
               </a>
             </span>
+          </p>
+          <p className="mt-4 text-sm leading-5 text-gray-100">
+            {pantoneDisclaimer.short} {pantoneDisclaimer.accuracy}
           </p>
         </div>
       </div>

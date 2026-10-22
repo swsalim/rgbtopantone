@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { pantoneDisclaimer } from '@/config/legal';
 import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
@@ -106,6 +107,11 @@ export default function Page() {
             <p>
               Our website may link to third-party tools and sites. Their privacy practices are
               governed by their own policies, not this one.
+            </p>
+            <h2>Third-Party Trademarks</h2>
+            <p>
+              {pantoneDisclaimer.short} Those names are used descriptively only, to identify the
+              colors our tools convert.
             </p>
             <h2>Changes to This Privacy Policy</h2>
             <p>

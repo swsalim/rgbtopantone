@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import { pantoneDisclaimer } from '@/config/legal';
 import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
@@ -96,6 +97,19 @@ export default function Page() {
               All website content, including text, branding, code, graphics, and layout, is owned
               by rgbtopantone.com or its licensors and is protected by applicable intellectual
               property laws.
+            </p>
+            <h2>Pantone® Trademark and Color Accuracy</h2>
+            <p>{pantoneDisclaimer.short}</p>
+            <p>
+              References to Pantone color names and codes on this site are descriptive only — they
+              identify the colors you are converting to or from and do not imply any association
+              with Pantone LLC.
+            </p>
+            <p>{pantoneDisclaimer.accuracy}</p>
+            <p>
+              Because converted values are approximations, rgbtopantone.com makes no warranty that a
+              converted color will match an official Pantone color in print or production, and is
+              not a substitute for licensed Pantone tools or an official Pantone Color Guide.
             </p>
             <h2>Limitation of Liability</h2>
             <p>
