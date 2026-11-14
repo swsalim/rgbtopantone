@@ -103,7 +103,7 @@ export default function Footer({ className, ...props }: FooterProps) {
           <BadgeRelaySite
             siteKey="site_live_xYEYREFClUowHLltyHz8uw"
             apiBase="https://badge-relay.swsalim.workers.dev"
-            revalidateSeconds={30}
+            revalidateSeconds={60 * 60 * 24 * 30}
           />
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
